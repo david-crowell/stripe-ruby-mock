@@ -45,10 +45,12 @@ module StripeMock
         fee_details: [
         ],
         card: {
+          id: "test_cc_default",
           object: "card",
           last4: "4242",
           type: "Visa",
           brand: "Visa",
+          funding: "credit",
           exp_month: 12,
           exp_year: 2013,
           fingerprint: "3TQGpK9JoY1GgXPw",
@@ -81,7 +83,8 @@ module StripeMock
         description: nil,
         dispute: nil,
         metadata: {
-        }
+        },
+        statement_description: "Test charge"
       }.merge(params)
     end
 
